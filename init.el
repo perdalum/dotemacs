@@ -121,13 +121,16 @@
 (require-package 'all-the-icons)
 (require-package 'all-the-icons-dired)
 ;; this does not work yet?
-;;(add-hook 'dired-mode-hook 'all-the-icons-dired-mode)
+(add-hook 'dired-mode-hook 'all-the-icons-dired-mode)
 (require-package 'sunrise-commander)
 (require-package 'sunrise-x-buttons)
 (require-package 'sunrise-x-tree)
 (require-package 'magit)
 (require-package 'evil)
 (require 'evil)
+(require-package 'evil-leader)
+(global-evil-leader-mode)
+(evil-leader/set-leader ",")
 (evil-mode 1)
 (require 'init-evil)
 
