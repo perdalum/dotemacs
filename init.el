@@ -106,8 +106,11 @@
 (require 'init-helm)
 (require-package 'linum-relative)
 (setq linum-relative-current-symbol "")
+
+;; Themes
 (require-package 'challenger-deep-theme)
 (require-package 'calmer-forest-theme)
+
 ;; Jeg kan ikke helt finde ud af hvordan powerline virker...
 ;(require-package 'powerline "20170708.1442")
 ;; (require 'powerline)
@@ -124,12 +127,19 @@
 (require-package 'sunrise-x-tree)
 (require-package 'magit)
 (require-package 'evil)
-;;(require 'evil)
-;;(evil-mode 1)
+(require 'evil)
+(evil-mode 1)
+(require 'init-evil)
 
 ;; Andre muligheder
-;; - evil
-;; - gennemgå biebers evil setup
+;; - window navigtation
+;; fuzzy match for helm
+
+;; Application packages
+(require-package 'auctex)
+(require-package 'latex-extra)
+(require-package 'ess)
+(require 'init-auctex)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -141,7 +151,7 @@
  '(menu-bar-mode nil)
  '(package-selected-packages
    (quote
-    (olivetti neotree neontree calmer-forest-theme dark-forest-theme powerline challenger-deep-theme challenger-deep linum-relative helm)))
+    (evil-leader ess latex-extra auctex olivetti neotree neontree calmer-forest-theme dark-forest-theme powerline challenger-deep-theme challenger-deep linum-relative helm)))
  '(show-paren-mode t)
  '(tool-bar-mode nil))
 (custom-set-faces
