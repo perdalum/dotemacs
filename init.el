@@ -120,6 +120,8 @@
 (require-package 'fountain-mode)
 (require-package 'all-the-icons)
 (require-package 'all-the-icons-dired)
+(global-prettify-symbols-mode 1)
+
 ;; this does not work yet?
 (add-hook 'dired-mode-hook 'all-the-icons-dired-mode)
 (require-package 'sunrise-commander)
@@ -178,7 +180,7 @@
  '(menu-bar-mode nil)
  '(package-selected-packages
    (quote
-    (ess-view ess-smart-equals ess-R-data-view latex-pretty-symbols multiple-cursors dired-narrow markdown-mode polymode evil-leader ess latex-extra auctex olivetti neotree neontree calmer-forest-theme dark-forest-theme powerline challenger-deep-theme challenger-deep linum-relative helm)))
+    (ess-smart-equals ess latex-extra auctex evil-leader olivetti neotree neontree calmer-forest-theme dark-forest-theme powerline challenger-deep-theme challenger-deep linum-relative helm)))
  '(show-paren-mode t)
  '(tool-bar-mode nil))
 (custom-set-faces
