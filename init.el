@@ -76,7 +76,7 @@
 (setq tab-always-indent 'complete)
 (add-to-list 'completion-styles 'initials t)
 ;; make fringe color like background
-;(set-face-attribute 'fringe nil :background nil)
+(set-face-attribute 'fringe nil :background nil)
 
 ;; Why did I do this? Perhaps to keep vc from meddling with things
 ;; that Magit does, but it's convenient to be able to lean on vc for
@@ -154,7 +154,7 @@
  '(menu-bar-mode nil)
  '(package-selected-packages
    (quote
-    (evil-leader ess latex-extra auctex olivetti neotree neontree calmer-forest-theme dark-forest-theme powerline challenger-deep-theme challenger-deep linum-relative helm)))
+    (ess latex-extra auctex evil-leader olivetti neotree neontree calmer-forest-theme dark-forest-theme powerline challenger-deep-theme challenger-deep linum-relative helm)))
  '(show-paren-mode t)
  '(tool-bar-mode nil))
 (custom-set-faces
