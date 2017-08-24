@@ -142,8 +142,18 @@
 (require-package 'auctex)
 (require-package 'latex-extra)
 (require-package 'ess)
+(require-package 'polymode)
+;;; MARKDOWN
+(add-to-list 'auto-mode-alist '("\\.md" . poly-markdown-mode))
+
+;;; R modes
+(add-to-list 'auto-mode-alist '("\\.Snw" . poly-noweb+r-mode))
+(add-to-list 'auto-mode-alist '("\\.Rnw" . poly-noweb+r-mode))
+(add-to-list 'auto-mode-alist '("\\.Rmd" . poly-markdown+r-mode))
+
 (require 'init-auctex)
 
+(set-face-attribute 'fringe nil :background nil)
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -154,7 +164,7 @@
  '(menu-bar-mode nil)
  '(package-selected-packages
    (quote
-    (evil-leader ess latex-extra auctex olivetti neotree neontree calmer-forest-theme dark-forest-theme powerline challenger-deep-theme challenger-deep linum-relative helm)))
+    (polymode evil-leader ess latex-extra auctex olivetti neotree neontree calmer-forest-theme dark-forest-theme powerline challenger-deep-theme challenger-deep linum-relative helm)))
  '(show-paren-mode t)
  '(tool-bar-mode nil))
 (custom-set-faces
