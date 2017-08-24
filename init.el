@@ -133,6 +133,10 @@
 (evil-leader/set-leader ",")
 (evil-mode 1)
 (require 'init-evil)
+(require-package 'dired-narrow)
+(define-key dired-mode-map "/" 'dired-narrow)
+(define-key dired-mode-map "j" 'dired-next-line)
+(define-key dired-mode-map "k" 'dired-previous-line)
 
 ;; Andre muligheder
 ;; - window navigtation
@@ -141,7 +145,9 @@
 ;; Application packages
 (require-package 'auctex)
 (require-package 'latex-extra)
+(require-package 'markdown-mode)
 (require-package 'ess)
+(require 'init-ess)
 (require-package 'polymode)
 ;;; MARKDOWN
 (add-to-list 'auto-mode-alist '("\\.md" . poly-markdown-mode))
@@ -164,7 +170,7 @@
  '(menu-bar-mode nil)
  '(package-selected-packages
    (quote
-    (polymode ess latex-extra auctex evil-leader olivetti neotree neontree calmer-forest-theme dark-forest-theme powerline challenger-deep-theme challenger-deep linum-relative helm)))
+    (dired-narrow markdown-mode polymode evil-leader ess latex-extra auctex olivetti neotree neontree calmer-forest-theme dark-forest-theme powerline challenger-deep-theme challenger-deep linum-relative helm)))
  '(show-paren-mode t)
  '(tool-bar-mode nil))
 (custom-set-faces

@@ -20,6 +20,10 @@
 (dolist (mode '(magit-log-edit-mode))
   (add-to-list 'evil-insert-state-modes mode))
 
+;; try to use emacs editing for evil insert mode
+(setq evil-insert-state-map (make-sparse-keymap))
+(define-key evil-insert-state-map (kbd "<escape>") 'evil-normal-state)
+
 (add-to-list 'evil-buffer-regexps '("\\*Flycheck"))
 
 (evil-add-hjkl-bindings occur-mode-map 'emacs
