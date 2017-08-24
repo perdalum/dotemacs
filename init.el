@@ -138,26 +138,34 @@
 (define-key dired-mode-map "j" 'dired-next-line)
 (define-key dired-mode-map "k" 'dired-previous-line)
 
+(require-package 'multiple-cursors)
+(require-package 'expand-region)
+
 ;; Andre muligheder
 ;; - window navigtation
+;; - lær multiple-cursors fra http://emacsrocks.com/e13.html
 ;; fuzzy match for helm
 
 ;; Application packages
 (require-package 'auctex)
+(require 'init-auctex)
 (require-package 'latex-extra)
+(require-package 'latex-pretty-symbols)
+
 (require-package 'markdown-mode)
+
 (require-package 'ess)
 (require 'init-ess)
-(require-package 'polymode)
-;;; MARKDOWN
-(add-to-list 'auto-mode-alist '("\\.md" . poly-markdown-mode))
+(require-package 'ess-R-data-view)
+(require-package 'ess-smart-equals)
+(require-package 'ess-view)
 
-;;; R modes
+(require-package 'polymode)
+(add-to-list 'auto-mode-alist '("\\.md" . poly-markdown-mode))
 (add-to-list 'auto-mode-alist '("\\.Snw" . poly-noweb+r-mode))
 (add-to-list 'auto-mode-alist '("\\.Rnw" . poly-noweb+r-mode))
 (add-to-list 'auto-mode-alist '("\\.Rmd" . poly-markdown+r-mode))
 
-(require 'init-auctex)
 
 (set-face-attribute 'fringe nil :background nil)
 (custom-set-variables
@@ -170,7 +178,7 @@
  '(menu-bar-mode nil)
  '(package-selected-packages
    (quote
-    (dired-narrow markdown-mode polymode evil-leader ess latex-extra auctex olivetti neotree neontree calmer-forest-theme dark-forest-theme powerline challenger-deep-theme challenger-deep linum-relative helm)))
+    (ess-view ess-smart-equals ess-R-data-view latex-pretty-symbols multiple-cursors dired-narrow markdown-mode polymode evil-leader ess latex-extra auctex olivetti neotree neontree calmer-forest-theme dark-forest-theme powerline challenger-deep-theme challenger-deep linum-relative helm)))
  '(show-paren-mode t)
  '(tool-bar-mode nil))
 (custom-set-faces
