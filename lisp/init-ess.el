@@ -56,9 +56,7 @@
   (global-prettify-symbols-mode +1))
 
 ;; no smart expansion of the underscore
-(ess-toggle-underscore nil)
-(define-key ess-mode-map "\M-M" " %>% ")
-
-
+;;(ess-toggle-underscore nil)
+;;(define-key ess-mode-map "\M-M" " %>% ")
 
 (provide 'init-ess)

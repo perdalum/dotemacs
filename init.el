@@ -142,6 +142,7 @@
 
 (require-package 'multiple-cursors)
 (require-package 'expand-region)
+(require 'init-eshell)
 
 ;; Andre muligheder
 ;; - window navigtation
@@ -170,12 +171,16 @@
 
 
 (set-face-attribute 'fringe nil :background nil)
+(global-set-key (kbd "A-<tab>") 'other-frame)
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(column-number-mode t)
+ '(fringe-mode (quote (nil . 0)) nil (fringe))
+ '(indicate-buffer-boundaries (quote left))
  '(linum-relative-global-mode t)
  '(menu-bar-mode nil)
  '(package-selected-packages
