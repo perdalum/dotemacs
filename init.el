@@ -127,6 +127,9 @@
 (require-package 'sunrise-x-buttons)
 (require-package 'sunrise-x-tree)
 (require-package 'magit)
+(require-package 'diff-hl)
+(add-hook 'dired-mode-hook 'diff-hl-dired-mode)
+(add-hook 'magit-post-refresh-hook 'diff-hl-magit-post-refresh)
 (require-package 'evil)
 (require 'evil)
 (require-package 'evil-leader)
@@ -185,7 +188,7 @@
  '(menu-bar-mode nil)
  '(package-selected-packages
    (quote
-    (ess-smart-equals ess latex-extra auctex evil-leader olivetti neotree neontree calmer-forest-theme dark-forest-theme powerline challenger-deep-theme challenger-deep linum-relative helm)))
+    (diff-hl ess-smart-equals ess latex-extra auctex evil-leader olivetti neotree neontree calmer-forest-theme dark-forest-theme powerline challenger-deep-theme challenger-deep linum-relative helm)))
  '(show-paren-mode t)
  '(tool-bar-mode nil))
 (custom-set-faces
