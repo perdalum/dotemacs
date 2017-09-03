@@ -122,7 +122,6 @@
 (require-package 'all-the-icons-dired)
 (global-prettify-symbols-mode 1)
 
-;; this does not work yet?
 (add-hook 'dired-mode-hook 'all-the-icons-dired-mode)
 (require-package 'sunrise-commander)
 (require-package 'sunrise-x-buttons)
@@ -143,6 +142,7 @@
 (require-package 'multiple-cursors)
 (require-package 'expand-region)
 (require 'init-eshell)
+(require 'init-org)
 
 ;; Andre muligheder
 ;; - window navigtation

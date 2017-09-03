@@ -17,4 +17,23 @@
 ;; (setq interprogram-cut-function 'paste-to-osx)
 ;; (setq interprogram-paste-function 'copy-from-osx)
 
+
+
+(defun go-focus ()
+  "Enable focused writing"
+  (interactive)
+  (linum-relative-off)
+  (linum-mode 0)
+  (fringe-mode 0)
+  (olivetti-mode 1))
+
+
+(defun exit-focus ()
+  "Go back to my normal state"
+  (interactive)
+  (olivetti-mode 0)
+  (linum-mode 1)
+  (linum-relative-on)
+  (fringe-mode))
+
 (provide 'pmd)
