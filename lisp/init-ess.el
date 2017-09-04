@@ -40,6 +40,6 @@
 (add-hook 'ess-mode-hook 'my-pretty-R-operators)
 (global-prettify-symbols-mode 1)
 
-(define-key ess-mode-map "M-M" "%>%")
+;;(define-key ess-mode-map "M-M" "%>%")
 
 (provide 'init-ess)

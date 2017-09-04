@@ -174,6 +174,9 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(column-number-mode t)
+ '(display-time-mode t)
+ '(fringe-mode (quote (nil . 0)) nil (fringe))
+ '(indicate-buffer-boundaries (quote left))
  '(linum-relative-global-mode t)
  '(menu-bar-mode nil)
  '(package-selected-packages
