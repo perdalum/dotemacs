@@ -120,12 +120,16 @@
 (require-package 'fountain-mode)
 (require-package 'all-the-icons)
 (require-package 'all-the-icons-dired)
-;; this does not work yet?
+(global-prettify-symbols-mode 1)
+
 (add-hook 'dired-mode-hook 'all-the-icons-dired-mode)
 (require-package 'sunrise-commander)
 (require-package 'sunrise-x-buttons)
 (require-package 'sunrise-x-tree)
 (require-package 'magit)
+(require-package 'diff-hl)
+(add-hook 'dired-mode-hook 'diff-hl-dired-mode)
+(add-hook 'magit-post-refresh-hook 'diff-hl-magit-post-refresh)
 (require-package 'evil)
 (require 'evil)
 (require-package 'evil-leader)
@@ -140,6 +144,8 @@
 
 (require-package 'multiple-cursors)
 (require-package 'expand-region)
+(require 'init-eshell)
+(require 'init-org)
 
 ;; Andre muligheder
 ;; - window navigtation
@@ -168,20 +174,25 @@
 
 
 (set-face-attribute 'fringe nil :background nil)
+(global-set-key (kbd "A-<tab>") 'other-frame)
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(column-number-mode t)
+<<<<<<< HEAD
  '(display-time-mode t)
+=======
+>>>>>>> b1cbcef1c13182d37a709df6aec3f4c1d7321564
  '(fringe-mode (quote (nil . 0)) nil (fringe))
  '(indicate-buffer-boundaries (quote left))
  '(linum-relative-global-mode t)
  '(menu-bar-mode nil)
  '(package-selected-packages
    (quote
-    (ess-view ess-smart-equals ess-R-data-view latex-pretty-symbols multiple-cursors dired-narrow markdown-mode polymode evil-leader ess latex-extra auctex olivetti neotree neontree calmer-forest-theme dark-forest-theme powerline challenger-deep-theme challenger-deep linum-relative helm)))
+    (diff-hl ess-smart-equals ess latex-extra auctex evil-leader olivetti neotree neontree calmer-forest-theme dark-forest-theme powerline challenger-deep-theme challenger-deep linum-relative helm)))
  '(show-paren-mode t)
  '(tool-bar-mode nil))
 (custom-set-faces

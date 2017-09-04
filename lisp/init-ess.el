@@ -29,17 +29,21 @@
 ;;                  '(("\\(%>%\\)" 1
 ;;                     font-lock-builtin-face t)))))
 
-(defun my-pretty-R-operators ()
-  "make some word or string show as pretty Unicode symbols"
-  (setq prettify-symbols-alist
-        '(
-          ("%>%" . "⇛")
-          ("<-"  . "⇐")
-          )))
+;; (defun my-pretty-R-operators ()
+;;   "make some word or string show as pretty Unicode symbols"
+;;   (setq prettify-symbols-alist
+;;         '(
+;;           ("%>%" . "⇛")
+;;           ("<-"  . "⇐")
+;;           )))
 
-(add-hook 'ess-mode-hook 'my-pretty-R-operators)
-(global-prettify-symbols-mode 1)
+;; (add-hook 'ess-mode-hook 'my-pretty-R-operators)
+;; (add-hook 'R-mode-hook 'my-pretty-R-operators)
+;; (global-prettify-symbols-mode 1) ; this sexp has been moved to mail file.
 
-;;(define-key ess-mode-map "M-M" "%>%")
+
+;; no smart expansion of the underscore
+;;(ess-toggle-underscore nil)
+;;(define-key ess-mode-map "\M-M" " %>% ")
 
 (provide 'init-ess)
