@@ -182,10 +182,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(column-number-mode t)
-<<<<<<< HEAD
  '(display-time-mode t)
-=======
->>>>>>> b1cbcef1c13182d37a709df6aec3f4c1d7321564
  '(fringe-mode (quote (nil . 0)) nil (fringe))
  '(indicate-buffer-boundaries (quote left))
  '(linum-relative-global-mode t)

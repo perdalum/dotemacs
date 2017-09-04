@@ -41,6 +41,17 @@
 ;; (add-hook 'R-mode-hook 'my-pretty-R-operators)
 ;; (global-prettify-symbols-mode 1) ; this sexp has been moved to mail file.
 
+;; OR this (from https://www.miskatonic.org/2014/10/17/prettifying-r-in-emacs/)
+(when (boundp 'global-prettify-symbols-mode)
+  (add-hook 'ess-mode-hook
+            (lambda ()
+              (push '("%>%" . ?|) prettify-symbols-alist)
+	      ))
+  (add-hook 'inferior-ess-mode-hook
+            (lambda ()
+              (push '("%>%" . ?|) prettify-symbols-alist)
+	      ))
+  (global-prettify-symbols-mode +1))
 
 ;; no smart expansion of the underscore
 ;;(ess-toggle-underscore nil)
