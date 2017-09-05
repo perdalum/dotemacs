@@ -36,4 +36,13 @@
   (linum-relative-on)
   (fringe-mode))
 
+;; Change the color of the curly arrow marking continued line
+;; Color names: http://raebear.net/comp/emacscolors.html
+(defface my-custom-curly-face
+  '((t (:foreground "misty rose")))
+  "Face for fringe curly bitmaps."
+  :group 'basic-faces)
+
+(set-fringe-bitmap-face 'left-curly-arrow 'my-custom-curly-face)
+
 (provide 'pmd)

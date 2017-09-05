@@ -122,6 +122,11 @@
 (require-package 'all-the-icons-dired)
 (global-prettify-symbols-mode 1)
 
+;; Remember mode - persistente noter
+(setq remember-data-file (substitute-in-file-name "$HOME/Dropbox/Noter/remember"))
+(setq remember-notes-buffer-name "PERSISTENTE NOTER")
+(setq remember-notes-initial-major-mode 'org-mode)
+
 (add-hook 'dired-mode-hook 'all-the-icons-dired-mode)
 (require-package 'sunrise-commander)
 (require-package 'sunrise-x-buttons)
@@ -182,13 +187,17 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(column-number-mode t)
+ '(display-time-mode t)
  '(fringe-mode (quote (nil . 0)) nil (fringe))
  '(indicate-buffer-boundaries (quote left))
  '(linum-relative-global-mode t)
  '(menu-bar-mode nil)
+ '(org-agenda-files
+   (quote
+    ("~/Dropbox/Noter/refile-beorg.org" "~/Dropbox/Noter/probing_noter.org" "~/Dropbox/Noter/arbejde.org" "~/Dropbox/Noter/indbakke.org")))
  '(package-selected-packages
    (quote
-    (diff-hl ess-smart-equals ess latex-extra auctex evil-leader olivetti neotree neontree calmer-forest-theme dark-forest-theme powerline challenger-deep-theme challenger-deep linum-relative helm)))
+    (ess-view ess-smart-equals ess-R-data-view latex-pretty-symbols multiple-cursors dired-narrow markdown-mode polymode evil-leader ess latex-extra auctex olivetti neotree neontree calmer-forest-theme dark-forest-theme powerline challenger-deep-theme challenger-deep linum-relative helm)))
  '(show-paren-mode t)
  '(tool-bar-mode nil))
 (custom-set-faces
