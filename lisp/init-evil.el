@@ -113,6 +113,7 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
  "S"  'delete-trailing-whitespace
  ;;"t"  'gtags-reindex
  ;;"T"  'gtags-find-tag
+ "t"  'neotree
  "w"  'save-buffer
  "x"  'helm-M-x
  "y"  'yank-to-x-clipboard)
