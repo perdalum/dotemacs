@@ -18,5 +18,6 @@
       '((sequence "TODO(t)" "WAIT(w@/!)" "|" "DONE(d!)" "CANCELED(c@)")))
 
 (require 'org-mouse)
+(org-indent-mode 1)
 
 (provide 'init-org)

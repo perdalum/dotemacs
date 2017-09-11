@@ -149,6 +149,7 @@
 (define-key dired-mode-map "k" 'dired-previous-line)
 
 (require-package 'multiple-cursors)
+(require-package 'evil-mc)
 (require-package 'expand-region)
 (require 'init-eshell)
 (require 'init-org)
