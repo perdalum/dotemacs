@@ -15,3 +15,44 @@ cd OneDrive/
 ld
 ls
 vi Gul\ peberfrugtsuppe.pdf 
+ls -lrt
+vi Nyheds\ manifest.tex 
+xcode-select
+xcode-select -s /Applications/Xcode-beta.app 
+sudo xcode-select -s /Applications/Xcode-beta.app 
+brew install clamav
+brew doctor
+sudo chown perdalum:admin /usr/local/sbin
+brew install clamav
+brew link clamav
+ls -l /usr/local
+mkdir /usr/local/sbin
+ls -l /usr/
+sudo chown -R perdalum:admin /usr/local
+ls /usr
+ls -l /usr
+sudo chown -R $(whoami):admin /usr/local
+ls
+ls -l
+cd /Volumes/Lager\ 2TB/DVD\ arkiv/
+ls -l
+ls -l1
+ls -1 > #<buffer DVD_arkiv>
+ledger convert forbrugskonto_aug_2017.csv  --input-date-format "%d-%n-%Y"
+ledger -f 2017-ledger convert forbrugskonto_aug_2017.csv  --input-date-format "%d-%n-%Y"
+ledger -f 2017.ledger convert forbrugskonto_aug_2017.csv  --input-date-format "%d-%n-%Y"
+ledger -f 2017.ledger convert forbrugskonto_aug_2017.csv  --input-date-format "%d-%n-%Y"
+brew search icsv
+ledger -f 2017.ledger convert forbrugskonto_aug_2017.csv  --input-date-format "%d-%n-%Y"
+ledger -f 2017.ledger convert forbrugskonto_aug_2017.csv  --input-date-format "%d-%m-%Y"
+ledger -f 2017.ledger convert forbrugskonto_aug_2017.csv  --input-date-format "%d-%m-%Y"
+ledger -f 2017.ledger convert forbrugskonto_aug_2017.csv  --input-date-format "%d-%m-%Y"
+ledger -f 2017.ledger convert forbrugskonto_aug_2017.csv  --input-date-format "%d-%m-%Y"
+ledger -f 2017.ledger convert forbrugskonto_aug_2017.csv  --input-date-format "%d-%m-%Y"> t.ledger
+ledger -f 2017.ledger convert forbrugskonto_aug_2017.csv  --input-date-format "%d-%m-%Y" 
+ledger -f 2017.ledger convert forbrugskonto_aug_2017.csv  --input-date-format "%d-%m-%Y" > t.ledger
+ledger -f 2017.ledger convert forbrugskonto_aug_2017.csv  --input-date-format "%d-%m-%Y"  > #<buffer t.ledger>
+echo "hello" > #<buffer t>
+ledger -f 2017.ledger convert forbrugskonto_aug_2017.csv  --input-date-format "%d-%m-%Y" 
+ledger -f 2017.ledger convert forbrugskonto_aug_2017.csv  --input-date-format "%d-%m-%Y" --account Forbrug
+ledger -f 2017.ledger convert forbrugskonto_aug_2017.csv  --input-date-format "%d-%m-%Y" --account Forbrug --invert

@@ -15,6 +15,7 @@
 ;;                  (not (string-suffix-p "." filename)))
 ;;         (add-to-list 'load-path (car file))))))
 
+
 (add-to-list 'exec-path "/usr/local/bin")
 
 ;; Don't litter my init file
@@ -181,12 +182,17 @@
 (set-face-attribute 'fringe nil :background nil)
 (global-set-key (kbd "A-<tab>") 'other-frame)
 
+
+(add-to-list 'load-path "/usr/local/Cellar/ledger/3.1.1_7/share/emacs/site-lisp/ledger")
+(require 'ledger-mode)
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(column-number-mode t)
+ '(csv-separators (quote (";" "	")))
  '(display-time-mode t)
  '(fringe-mode (quote (nil . 0)) nil (fringe))
  '(indicate-buffer-boundaries (quote left))
@@ -194,10 +200,10 @@
  '(menu-bar-mode nil)
  '(org-agenda-files
    (quote
-    ("~/Dropbox/Noter/refile-beorg.org" "~/Dropbox/Noter/probing_noter.org" "~/Dropbox/Noter/arbejde.org" "~/Dropbox/Noter/indbakke.org")))
+    ("~/Dropbox/Noter/org.org" "~/Dropbox/Noter/refile-beorg.org" "~/Dropbox/Noter/probing_noter.org" "~/Dropbox/Noter/arbejde.org" "~/Dropbox/Noter/indbakke.org")))
  '(package-selected-packages
    (quote
-    (ess-view ess-smart-equals ess-R-data-view latex-pretty-symbols multiple-cursors dired-narrow markdown-mode polymode evil-leader ess latex-extra auctex olivetti neotree neontree calmer-forest-theme dark-forest-theme powerline challenger-deep-theme challenger-deep linum-relative helm)))
+    (csv-mode solarized-theme ess-view ess-smart-equals ess-R-data-view latex-pretty-symbols multiple-cursors dired-narrow markdown-mode polymode evil-leader ess latex-extra auctex olivetti neotree neontree calmer-forest-theme dark-forest-theme powerline challenger-deep-theme challenger-deep linum-relative helm)))
  '(show-paren-mode t)
  '(tool-bar-mode nil))
 (custom-set-faces

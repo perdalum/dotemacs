@@ -1,3 +1,4 @@
 alias todo (org-agenda)
 alias cal (calendar)
 alias vi find-file $1
+alias ff find-file $1
