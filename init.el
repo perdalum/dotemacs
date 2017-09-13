@@ -201,7 +201,11 @@
  '(ansi-color-names-vector
    ["#073642" "#dc322f" "#859900" "#b58900" "#268bd2" "#d33682" "#2aa198" "#657b83"])
  '(column-number-mode t)
- '(csv-separators (quote (";" "	")))
+ '(compilation-message-face (quote default))
+ '(cua-global-mark-cursor-color "#2aa198")
+ '(cua-normal-cursor-color "#839496")
+ '(cua-overwrite-cursor-color "#b58900")
+ '(cua-read-only-cursor-color "#859900")
  '(display-time-mode t)
  '(fci-rule-color "#073642")
  '(fringe-mode (quote (nil . 0)) nil (fringe))
@@ -229,8 +233,6 @@
    (quote
     ("#002b36" "#002b36" "#002b36" "#002b36" "#002b36" "#002b36" "#002b36" "#002b36")))
  '(indicate-buffer-boundaries (quote left))
- '(ledger-post-use-completion-engine :ido)
- '(ledger-use-iso-dates t)
  '(linum-relative-global-mode t)
  '(magit-diff-use-overlays nil)
  '(menu-bar-mode nil)
@@ -239,10 +241,10 @@
     ("#dc322f" "#cb4b16" "#b58900" "#546E00" "#B4C342" "#00629D" "#2aa198" "#d33682" "#6c71c4")))
  '(org-agenda-files
    (quote
-    ("~/Dropbox/Noter/emacs.org" "~/Dropbox/Noter/kulturarvscluster.org" "~/Dropbox/Noter/privat.org" "~/Dropbox/Noter/refile-beorg.org" "~/Dropbox/Noter/probing_noter.org" "~/Dropbox/Noter/arbejde.org" "~/Dropbox/Noter/indbakke.org")))
+    ("~/Dropbox/Noter/personlig.org" "~/Dropbox/Noter/emacs.org" "~/Dropbox/Noter/kulturarvscluster.org" "~/Dropbox/Noter/refile-beorg.org" "~/Dropbox/Noter/probing_noter.org" "~/Dropbox/Noter/arbejde.org" "~/Dropbox/Noter/indbakke.org")))
  '(package-selected-packages
    (quote
-    (yasnippet yassnippet solarized-theme bm ess-view ess-smart-equals ess-R-data-view latex-pretty-symbols multiple-cursors dired-narrow markdown-mode polymode ess latex-extra auctex olivetti neotree neontree calmer-forest-theme dark-forest-theme powerline challenger-deep-theme challenger-deep linum-relative helm)))
+    (yasnippet yassnippet solarized-theme bm evil-mc ess-view ess-smart-equals ess-R-data-view latex-pretty-symbols multiple-cursors dired-narrow markdown-mode polymode evil-leader ess latex-extra auctex olivetti neotree neontree calmer-forest-theme dark-forest-theme powerline challenger-deep-theme challenger-deep linum-relative helm)))
  '(pos-tip-background-color "#073642")
  '(pos-tip-foreground-color "#93a1a1")
  '(show-paren-mode t)

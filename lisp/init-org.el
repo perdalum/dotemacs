@@ -27,12 +27,17 @@
 (define-key global-map "\C-ce"
         (lambda () (interactive) (org-capture nil "e")))
 
+;; org modules
+(setq org-modules (quote (org-bibtex
+                          org-habit)))
+
 ;; Use helm for refile
 ;; good info at https://blog.aaronbieber.com/2017/03/19/organizing-notes-with-refile.html
 (setq org-refile-targets '((org-agenda-files :maxlevel . 5)))
 (setq org-refile-use-outline-path 'file)
 (setq org-outline-path-complete-in-steps nil)
 (setq org-completion-use-ido nil)
+
 
 (require 'org-mouse)
 (org-indent-mode 1)
