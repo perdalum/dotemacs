@@ -152,7 +152,7 @@
 (define-key dired-mode-map "k" 'dired-previous-line)
 
 (require-package 'multiple-cursors)
-(require-package 'evil-mc)
+;;(require-package 'evil-mc)
 (require-package 'expand-region)
 (require 'init-eshell)
 (require 'init-org)
@@ -239,19 +239,12 @@
     ("#dc322f" "#cb4b16" "#b58900" "#546E00" "#B4C342" "#00629D" "#2aa198" "#d33682" "#6c71c4")))
  '(org-agenda-files
    (quote
-<<<<<<< HEAD
     ("~/Dropbox/Noter/emacs.org" "~/Dropbox/Noter/kulturarvscluster.org" "~/Dropbox/Noter/privat.org" "~/Dropbox/Noter/refile-beorg.org" "~/Dropbox/Noter/probing_noter.org" "~/Dropbox/Noter/arbejde.org" "~/Dropbox/Noter/indbakke.org")))
  '(package-selected-packages
    (quote
-    (yasnippet yassnippet solarized-theme bm evil-mc ess-view ess-smart-equals ess-R-data-view latex-pretty-symbols multiple-cursors dired-narrow markdown-mode polymode evil-leader ess latex-extra auctex olivetti neotree neontree calmer-forest-theme dark-forest-theme powerline challenger-deep-theme challenger-deep linum-relative helm)))
+    (yasnippet yassnippet solarized-theme bm ess-view ess-smart-equals ess-R-data-view latex-pretty-symbols multiple-cursors dired-narrow markdown-mode polymode ess latex-extra auctex olivetti neotree neontree calmer-forest-theme dark-forest-theme powerline challenger-deep-theme challenger-deep linum-relative helm)))
  '(pos-tip-background-color "#073642")
  '(pos-tip-foreground-color "#93a1a1")
-=======
-    ("~/Dropbox/Noter/emacs.org" "~/Dropbox/Noter/org.org" "~/Dropbox/Noter/refile-beorg.org" "~/Dropbox/Noter/probing_noter.org" "~/Dropbox/Noter/arbejde.org" "~/Dropbox/Noter/indbakke.org")))
- '(package-selected-packages
-   (quote
-    (csv-mode solarized-theme ess-view ess-smart-equals ess-R-data-view latex-pretty-symbols multiple-cursors dired-narrow markdown-mode polymode evil-leader ess latex-extra auctex olivetti neotree neontree calmer-forest-theme dark-forest-theme powerline challenger-deep-theme challenger-deep linum-relative helm)))
->>>>>>> b028a50c60b5832776c93a67474df246c2a03d78
  '(show-paren-mode t)
  '(smartrep-mode-line-active-bg (solarized-color-blend "#859900" "#073642" 0.2))
  '(term-default-bg-color "#002b36")
