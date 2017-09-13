@@ -34,8 +34,8 @@
   "Go back to my normal state"
   (interactive)
   (olivetti-mode 0)
-  (linum-mode 1)
-  (linum-relative-on)
+  ;;(linum-mode 1)
+  ;;(linum-relative-on)
   (fringe-mode))
 
 ;; Change the color of the curly arrow marking continued line
