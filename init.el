@@ -107,8 +107,8 @@
 (require 'init-helm)
 (global-set-key (kbd "C-c h") 'helm-mini)
 
-(require-package 'linum-relative)
-(setq linum-relative-current-symbol "")
+;;(require-package 'linum-relative)
+;;(setq linum-relative-current-symbol "")
 
 ;; Themes
 (require-package 'challenger-deep-theme)
@@ -155,7 +155,11 @@
 ;;(require-package 'evil-mc)
 (require-package 'expand-region)
 (require 'init-eshell)
+
+;; Install newest from Org ELPA
+(require-package 'org) ; Hm, it looks like this doen't work automatically
 (require 'init-org)
+
 (require-package 'bm)
 (require-package 'yasnippet)
 (yas-global-mode 1)

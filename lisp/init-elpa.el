@@ -9,8 +9,7 @@
 (add-to-list 'package-archives '("SC"  . "http://joseito.republika.pl/sunrise-commander/"))
 
 ;;; Pin some packages to specific repositories.
-;(setq package-pinned-packages '((gtags . "marmalade")
-;                                (php-extras . "marmalade")))
+(setq package-pinned-packages '((org . "org")))
 
 ;;; On-demand installation of packages
 (defun require-package (package &optional min-version no-refresh)

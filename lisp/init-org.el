@@ -13,6 +13,11 @@
 (setq org-clock-into-drawer t)
 ;; don't show done tasks in the agenda
 (setq org-agenda-skip-scheduled-if-done nil)
+;; Keep time clock between Emacs sessions
+(setq org-clock-persist 'history)
+(org-clock-persistence-insinuate)
+;; start the agenda in day view
+(setq org-agenda-span 'day)
 
 (setq org-todo-keywords
       '((sequence "TODO(t)" "WAIT(w@/!)" "|" "DONE(d!)" "AFVIST(a@)")))
