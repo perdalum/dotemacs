@@ -19,5 +19,5 @@
 
 (require 'org-mouse)
 (org-indent-mode 1)
-
+(setq org-pretty-entities t)
 (provide 'init-org)
