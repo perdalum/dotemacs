@@ -1,3 +1,0 @@
-alias todo (org-agenda)
-alias cal (calendar)
-alias vi find-file $1
