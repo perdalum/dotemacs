@@ -57,4 +57,14 @@
 ;;(ess-toggle-underscore nil)
 ;;(define-key ess-mode-map "\M-M" " %>% ")
 
+(defun pmd/insert-r-chunk (header) 
+  "Insert an r-chunk in markdown mode. Necessary due to
+interactions between polymode and yas snippet"
+  (interactive "sHeader: ")
+  (if (string= "" header)
+      (insert (concat "```{r}\n\n```"))
+    (insert (concat "```{r " header "}\n\n```")))
+  (forward-line -1))
+(global-set-key (kbd "C-c C-r") 'pmd/insert-r-chunk)
+
 (provide 'init-ess)
