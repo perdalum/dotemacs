@@ -31,6 +31,8 @@
 (setq org-modules (quote (org-bibtex
                           org-habit)))
 
+;; Automatisk display af Gode vaner hver morgen
+(run-at-time "06:00" 86400 '(lambda () (setq org-habit-show-habits t)))
 ;; Use helm for refile
 ;; good info at https://blog.aaronbieber.com/2017/03/19/organizing-notes-with-refile.html
 (setq org-refile-targets '((org-agenda-files :maxlevel . 5)))
