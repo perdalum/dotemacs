@@ -90,6 +90,14 @@
 (setq custom-safe-themes t)
 (column-number-mode t)
 (setq tab-width 4)
+;; from: http://pragmaticemacs.com/emacs/dont-kill-buffer-kill-this-buffer-instead/
+(defun bjm/kill-this-buffer ()
+  "Kill the current buffer."
+  (interactive)
+  (save-buffer)
+  (kill-buffer (current-buffer)))
+
+(global-set-key (kbd "C-x k") 'bjm/kill-this-buffer)
 
 ;; Allow confusing functions
 (put 'narrow-to-region 'disabled nil)
@@ -109,6 +117,9 @@
 
 ;;(require-package 'linum-relative)
 ;;(setq linum-relative-current-symbol "")
+
+;; dired
+(setq dired-listing-switches "-alH")
 
 ;; Themes
 (require-package 'challenger-deep-theme)

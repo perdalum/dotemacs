@@ -49,4 +49,8 @@
 (require 'org-mouse)
 (org-indent-mode 1)
 (setq org-pretty-entities t)
+
+(require-package 'org-bullets)
+(add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
+
 (provide 'init-org)
