@@ -90,6 +90,14 @@
 (setq custom-safe-themes t)
 (column-number-mode t)
 (setq tab-width 4)
+;; from: http://pragmaticemacs.com/emacs/dont-kill-buffer-kill-this-buffer-instead/
+(defun bjm/kill-this-buffer ()
+  "Kill the current buffer."
+  (interactive)
+  (save-buffer)
+  (kill-buffer (current-buffer)))
+
+(global-set-key (kbd "C-x k") 'bjm/kill-this-buffer)
 
 ;; Allow confusing functions
 (put 'narrow-to-region 'disabled nil)
@@ -105,12 +113,18 @@
 (require-package 'helm)
 (require 'helm)
 (require 'init-helm)
-(require-package 'linum-relative)
-(setq linum-relative-current-symbol "")
+(global-set-key (kbd "C-c h") 'helm-mini)
+
+;;(require-package 'linum-relative)
+;;(setq linum-relative-current-symbol "")
+
+;; dired
+(setq dired-listing-switches "-alH")
 
 ;; Themes
 (require-package 'challenger-deep-theme)
 (require-package 'calmer-forest-theme)
+(require-package 'solarized-theme)
 
 ;; Jeg kan ikke helt finde ud af hvordan powerline virker...
 ;(require-package 'powerline "20170708.1442")
@@ -136,23 +150,30 @@
 (require-package 'diff-hl)
 (add-hook 'dired-mode-hook 'diff-hl-dired-mode)
 (add-hook 'magit-post-refresh-hook 'diff-hl-magit-post-refresh)
-(require-package 'evil)
-(require 'evil)
-(require-package 'evil-leader)
-(global-evil-leader-mode)
-(evil-leader/set-leader ",")
-(evil-mode 1)
-(require 'init-evil)
+;;(require-package 'evil)
+;;(require 'evil)
+;;(require-package 'evil-leader)
+;;(global-evil-leader-mode)
+;;(evil-leader/set-leader ",")
+;;(evil-mode 1)
+;;(require 'init-evil)
 (require-package 'dired-narrow)
 (define-key dired-mode-map "/" 'dired-narrow)
 (define-key dired-mode-map "j" 'dired-next-line)
 (define-key dired-mode-map "k" 'dired-previous-line)
 
 (require-package 'multiple-cursors)
-(require-package 'evil-mc)
+;;(require-package 'evil-mc)
 (require-package 'expand-region)
 (require 'init-eshell)
+
+;; Install newest from Org ELPA
+(require-package 'org) ; Hm, it looks like this doen't work automatically
 (require 'init-org)
+
+(require-package 'bm)
+(require-package 'yasnippet)
+(yas-global-mode 1)
 
 ;; Andre muligheder
 ;; - window navigtation
@@ -187,31 +208,5 @@
 (add-to-list 'load-path "/usr/local/Cellar/ledger/3.1.1_7/share/emacs/site-lisp/ledger")
 (require 'ledger-mode)
 
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(column-number-mode t)
- '(csv-separators (quote (";" "	")))
- '(display-time-mode t)
- '(fringe-mode (quote (nil . 0)) nil (fringe))
- '(indicate-buffer-boundaries (quote left))
- '(ledger-post-use-completion-engine :ido)
- '(ledger-use-iso-dates t)
- '(linum-relative-global-mode t)
- '(menu-bar-mode nil)
- '(org-agenda-files
-   (quote
-    ("~/Dropbox/Noter/emacs.org" "~/Dropbox/Noter/org.org" "~/Dropbox/Noter/refile-beorg.org" "~/Dropbox/Noter/arbejde.org" "~/Dropbox/Noter/indbakke.org")))
- '(package-selected-packages
-   (quote
-    (csv-mode solarized-theme ess-view ess-smart-equals ess-R-data-view latex-pretty-symbols multiple-cursors dired-narrow markdown-mode polymode evil-leader ess latex-extra auctex olivetti neotree neontree calmer-forest-theme dark-forest-theme powerline challenger-deep-theme challenger-deep linum-relative helm)))
- '(show-paren-mode t)
- '(tool-bar-mode nil))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(default ((t (:family "Hack" :foundry "nil" :slant normal :weight normal :height 120 :width normal)))))
+(setq custom-file "~/.emacs.d/customizations.el")
+(load custom-file)

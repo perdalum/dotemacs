@@ -17,7 +17,9 @@
 ;; (setq interprogram-cut-function 'paste-to-osx)
 ;; (setq interprogram-paste-function 'copy-from-osx)
 
-
+(global-set-key (kbd "M-\"") 'insert-pair)
+(global-set-key (kbd "M-M") "%>%")
+(global-set-key (kbd "C-.") 'er/expand-region)
 
 (defun go-focus ()
   "Enable focused writing"
@@ -32,8 +34,8 @@
   "Go back to my normal state"
   (interactive)
   (olivetti-mode 0)
-  (linum-mode 1)
-  (linum-relative-on)
+  ;;(linum-mode 1)
+  ;;(linum-relative-on)
   (fringe-mode))
 
 ;; Change the color of the curly arrow marking continued line
@@ -44,5 +46,9 @@
   :group 'basic-faces)
 
 (set-fringe-bitmap-face 'left-curly-arrow 'my-custom-curly-face)
+
+(defun pmd/highlight-line ()
+  (interactive)
+  (bm-toggle))
 
 (provide 'pmd)
