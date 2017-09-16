@@ -203,7 +203,7 @@
  '(menu-bar-mode nil)
  '(org-agenda-files
    (quote
-    ("~/Dropbox/Noter/emacs.org" "~/Dropbox/Noter/org.org" "~/Dropbox/Noter/refile-beorg.org" "~/Dropbox/Noter/probing_noter.org" "~/Dropbox/Noter/arbejde.org" "~/Dropbox/Noter/indbakke.org")))
+    ("~/Dropbox/Noter/emacs.org" "~/Dropbox/Noter/org.org" "~/Dropbox/Noter/refile-beorg.org" "~/Dropbox/Noter/arbejde.org" "~/Dropbox/Noter/indbakke.org")))
  '(package-selected-packages
    (quote
     (csv-mode solarized-theme ess-view ess-smart-equals ess-R-data-view latex-pretty-symbols multiple-cursors dired-narrow markdown-mode polymode evil-leader ess latex-extra auctex olivetti neotree neontree calmer-forest-theme dark-forest-theme powerline challenger-deep-theme challenger-deep linum-relative helm)))
